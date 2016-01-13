@@ -20,7 +20,7 @@
  * URL paramaters:
  *
  * paystation (REQUIRED)
- * pstn_pi = paystation ID (REQUIRED) - This is an initiator flag for the payment engine and can be nothing, or if your environment requires to assign a value please send ‘_empty’
+ * pstn_pi = paystation ID (REQUIRED) - This is an initiator flag for the payment engine and can be nothing, or if your environment requires to assign a value please send â€˜_emptyâ€™
  * pstn_gi = Gateway ID (REQUIRED) - The Gateway ID that the payments will be made against
  * pstn_ms = Merchant Session (REQUIRED) - a unique identification code for each financial transaction request. Used to identify the transaction when tracing transactions. Must be unique for each attempt at every transaction.
  * pstn_am = Ammount (REQUIRED) - the amount of the transaction, in cents.
@@ -152,7 +152,7 @@ class ImprovedPaystationHostedPayment extends Payment {
 			$output = $controller->renderWith('PaymentProcessingPage');
 
 			Director::redirect($paymenturl); //redirect to payment gateway
-			return new Payment_Processing($output);
+			return EcommercePayment_Processing::create($output);
 		}
 
 
@@ -291,15 +291,15 @@ class ImprovedPaystationHostedPayment_Handler extends Controller {
 	/** Quick Lookup Refernce:
  	 *
 	 * AcquirerName - Merchants Acquirer Name
-	 * AcquirerMerchantID - The acquirer’s merchant ID used for the transaction
+	 * AcquirerMerchantID - The acquirerâ€™s merchant ID used for the transaction
 	 * PaystationUserID - Paystation username
 	 * PaystationTransactionID - A string containing the unique transaction ID assigned to the	transaction attempt by the Paystation server.
 	 * PurchaseAmount - The amount of the transaction, in cents.
 	 * MerchantSession - A string containing the unique reference assigned to the transaction by the merchants system
 	 * ReturnReceiptNumber - The RRN number is a virtual terminal counter for the transaction and is not unique.
 	 * ShoppingTransactionNumber - Unique bank reference assigned to the transaction
-	 * AcquirerResponseCode - Acquirer’s response code. The result code’s vary from acquirer to acquirer and is included for debugging purposes. Please process	transaction result from the PaystationErrorCode.
-	 * QSIResponseCode - Payment Server Response code – the actual raw result from the payment server. Please process transaction result from the PaystationErrorCode.
+	 * AcquirerResponseCode - Acquirerâ€™s response code. The result codeâ€™s vary from acquirer to acquirer and is included for debugging purposes. Please process	transaction result from the PaystationErrorCode.
+	 * QSIResponseCode - Payment Server Response code â€“ the actual raw result from the payment server. Please process transaction result from the PaystationErrorCode.
 	 * PaystationErrorCode - The result of the transaction
 	 * BatchNumber - The Batch number on the Payment Server that this transaction will be added to in order to be processed by the acquiring institution.
 	 * Cardtype - The card type used

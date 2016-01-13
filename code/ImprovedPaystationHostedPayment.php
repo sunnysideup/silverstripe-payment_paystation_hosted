@@ -165,7 +165,7 @@ class ImprovedPaystationHostedPayment extends Payment {
 			$this->Status = 'Failure';
 			$this->write();
 			//user_error('Paystation error: $error');
-			return new Payment_Failure($sxml->PaystationErrorMessage);
+			return EcommercePayment_Failure::create($sxml->PaystationErrorMessage);
 		}
 
 		//else recieved bad xml or transaction falied for an unknown reason

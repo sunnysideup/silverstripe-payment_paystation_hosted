@@ -171,7 +171,7 @@ class ImprovedPaystationHostedPayment extends Payment {
 		//else recieved bad xml or transaction falied for an unknown reason
 		//what should happen here?
 
-		return new Payment_Failure("Unknown error");
+		return EcommercePayment_Failure::create("Unknown error");
 	}
 
 	function ProcessError($errorcode){

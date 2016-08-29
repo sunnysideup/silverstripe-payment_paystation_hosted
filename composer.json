@@ -1,21 +1,26 @@
 {
-	"name": "sunnysideup/payment_paystation_hosted",
-	"type": "silverstripe-module",
-	"description": "This module adds paystation as a payment gateway to your silverstripe ecommerce and payment modules.",
-	"homepage": "http://www.silverstripe-ecommerce.com",
-	"keywords": ["ecommerce", "e-commerce", "shop", "paystation hosted", "paystation","silverstripe"],
-	"license": "Sunny Side Up (BSD-3-Clause and CUSTOM)",
-	"authors":[
-		{
-			"name": "Nicolaas Francken",
-			"homepage": "https://github.com/sunnysideup",
-			"email" : "modules@sunnysideup.co.nz",
-			"role" : "lead developer"
-		}
-	],
-	"require":{
-		"php": ">=5.3.2",
-		"silverstripe/framework": "~2.4",
-		"sunnysideup/ecommerce": "~2.4"
-	}
+    "name": "sunnysideup/payment_paystation_hosted",
+    "type": "silverstripe-module",
+    "description": "This module adds paystation as a payment gateway to your silverstripe ecommerce and payment modules.",
+    "keywords": [
+        "ecommerce",
+        "e-commerce",
+        "shop",
+        "paystation hosted",
+        "paystation",
+        "silverstripe"
+    ],
+    "license": "Sunny Side Up (BSD-3-Clause and CUSTOM)",
+    "authors": [
+        {
+            "name": "Nicolaas Francken",
+            "email": "modules@sunnysideup.co.nz",
+            "role": "lead developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.2",
+        "silverstripe/framework": "~2.4",
+        "sunnysideup/ecommerce": "~2.4"
+    }
 }

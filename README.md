@@ -1,28 +1,72 @@
-# Paystation Hosted Payment
+# Silverstripe payment paystation hosted module
+[![Build Status](https://travis-ci.org/sunnysideup/silverstripe-payment_paystation_hosted.svg?branch=master)](https://travis-ci.org/sunnysideup/silverstripe-payment_paystation_hosted)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/sunnysideup/silverstripe-payment_paystation_hosted/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/sunnysideup/silverstripe-payment_paystation_hosted/?branch=master)
+[![codecov.io](https://codecov.io/github/sunnysideup/silverstripe-payment_paystation_hosted/coverage.svg?branch=master)](https://codecov.io/github/sunnysideup/silverstripe-payment_paystation_hosted?branch=master)
+![helpfulrobot](https://helpfulrobot.io/sunnysideup/payment_paystation_hosted/badge)
 
-Provides the connection for the Paystation Hosted payment gateway.
-    
-## Maintainer Contact   
+[![Latest Stable Version](https://poser.pugx.org/sunnysideup/payment_paystation_hosted/version)](https://packagist.org/packages/sunnysideup/payment_paystation_hosted)
+[![License](https://poser.pugx.org/sunnysideup/payment_paystation_hosted/license)](https://packagist.org/packages/sunnysideup/payment_paystation_hosted)
+[![Monthly Downloads](https://poser.pugx.org/sunnysideup/payment_paystation_hosted/d/monthly)](https://packagist.org/packages/sunnysideup/payment_paystation_hosted)
 
- * Jeremy Shipman (Jedateach, <jeremy@burnbright.net>)
- * Nicolaas Francken (Nicolaas Francken [at] sunnysideup.co.nz)
+
+## Documentation
+
+
+
+ * [Developer Docs](docs/en/INDEX.md)
+ * [User Guide](docs/en/userguide.md)
+ * [API](http://ssmods.com/apis/payment_paystation_hosted/docs/en/api/)
 
 ## Requirements
 
- * SilverStripe 2.4+
- * Payments
 
-## Installation Instructions
 
-Assuming you have set up a paystation account already, and recieved the config details:
+see [composer.json](composer.json) for details
 
- 1. Copy into your SilverStripe site directory
- 2. Run [yourwebsite]/db/build?flush=all in your browser
- 3. Set your _config.php configuration as per the details provided by Paystation:
- 
- 	ImprovedPaystationHostedPayment::set_paystation_id('[PAYSTATION_ID]');
-	ImprovedPaystationHostedPayment::set_gateway_id('[GATEWAY_ID]');
+### Suggested Modules
 
- 4. Optionally put the payment into test mode:	
 
-	ImprovedPaystationHostedPayment::set_test_mode();
+
+see [composer.json](composer.json) for details
+
+
+## Installation
+
+
+```
+composer require sunnysideup/payment_paystation_hosted
+```
+
+### Configuration
+
+
+
+In the `_config` folder you will find the `payment_paystation_hosted.yml.example`
+file that shows options for the configuration of this module.
+
+We recommend that you:
+
+  1. copy these `payment_paystation_hosted.yml.example` files into your
+`mysite/_config` folder
+  2. remove the .example extension
+  3. delete the lines you not care about, and
+  4. adjust the configurations that you would like to use.
+
+
+## Contributing
+
+
+
+We welcome any contributions. See [CONTRIBUTING.md](CONTRIBUTING.md) for more details.
+
+## Paid assistance
+
+
+
+You can pay us to create an improved / adapted version of this module for your own projects.  Please contact us if you like to find out more: [www.sunnysideup.co.nz](http://www.sunnysideup.co.nz)
+
+## Author
+
+
+
+Sunny Side Up Ltd.
